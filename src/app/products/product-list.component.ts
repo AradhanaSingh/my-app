@@ -11,6 +11,7 @@ export class ProductListComponent {
     imageMargin: number = 2;
     // images are not displayed when the pages are first loaded
     showImage: boolean = false;
+    listFilter: string = 'cart';
     products: any[] = [
         {
             "productId": 1,

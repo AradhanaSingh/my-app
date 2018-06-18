@@ -7,13 +7,18 @@
         <div class='row'>
             <div class='col-md-2'> Filter by: </div>
             <div class='col-md-4'>
-                <input type='text'>
+                <!-- to specify two way binding in Angular, we use ngModel directive-->
+                <!-- Angular also needs to find ngModel directive-->
+                <!-- Associating  it with listFilter property-->
+                <input type='text'
+                    [(ngModel)]='listFilter' />
             </div>
 
         </div>
         <div class='row'>
            <div class='col-md-6'>
-               <h3>Filtered By: </h3>
+               <!-- we want listFilter to be listed here, so used interpolation-->
+               <h3>Filtered By: {{listFilter}} </h3>
            </div>
         </div>
         <div class="table-responsive">
