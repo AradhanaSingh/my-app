@@ -35,7 +35,10 @@
                 <tbody>
                     <tr  *ngFor='let product of products'>
                         <!--place holder for images-->
-                        <td></td>
+                        <td>
+                            <!-- using property binding to bind image source property , we enclose the src in square brackets-->
+                            <img [src]='product.imageUrl' [title]='product.productName' >
+                        </td>
                         <!--using interpolation to get values of propert-->
                         <td>{{product.productName}}</td>
                         <td>{{product.productCode}}</td>
