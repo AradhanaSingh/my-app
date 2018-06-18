@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import {Iproduct} from './product'
 
 @Component({
     selector: 'pm-products',
@@ -12,7 +13,7 @@ export class ProductListComponent {
     // images are not displayed when the pages are first loaded
     showImage: boolean = false;
     listFilter: string = 'cart';
-    products: any[] = [
+    products: IProduct[] = [
         {
             "productId": 1,
             "productName": "Leaf Rake",
