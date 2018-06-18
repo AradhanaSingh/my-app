@@ -37,7 +37,7 @@
                         <!--place holder for images-->
                         <td>
                             <!-- using property binding to bind image source property , we enclose the src in square brackets-->
-                            <img [src]='product.imageUrl' [title]='product.productName' >
+                            <img [src]='product.imageUrl' [title]='product.productName' [style.width.px]='imageWidth' [style.margin.px]='imageMargin'>
                         </td>
                         <!--using interpolation to get values of propert-->
                         <td>{{product.productName}}</td>
