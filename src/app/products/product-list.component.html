@@ -43,7 +43,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr  *ngFor='let product of products'>
+                    <!-- Bind it to filteredProducts property-->
+                    <tr  *ngFor='let product of filteredProducts'>
                         <!--place holder for images-->
                         <td>
                             <!-- using property binding to bind image source property , we enclose the src in square brackets-->
