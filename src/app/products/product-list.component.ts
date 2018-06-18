@@ -3,7 +3,9 @@ import {Iproduct} from './product'
 
 @Component({
     selector: 'pm-products',
-    templateUrl: './product-list.component.html'
+    templateUrl: './product-list.component.html',
+    // any defined selectors or style classes are only applicable to the component's template and won't leak out into any other part of application
+    styleUrls: ['./product-list.component.css']
 })
 
 export class ProductListComponent {
