@@ -33,7 +33,16 @@
                     </tr>
                 </thead>
                 <tbody>
-
+                    <tr  *ngFor='let product of products'>
+                        <!--place holder for images-->
+                        <td></td>
+                        <!--using interpolation to get values of propert-->
+                        <td>{{product.productName}}</td>
+                        <td>{{product.productCode}}</td>
+                        <td>{{product.releaseDate}}</td>
+                        <td>{{product.price}}</td>
+                        <td>{{product.starRating}}</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
