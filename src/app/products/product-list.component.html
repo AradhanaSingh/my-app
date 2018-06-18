@@ -21,7 +21,11 @@
                 <thead>
                     <tr>
                         <th>
-                            <button class='btn btn-primary'>
+                            <!-- click is the event and assign it to the method-->
+                            <!-- when the user clicks the button, the binding calls our method-->
+                            <!-- one can find all the events at https://developer.mozilla.org/en-US/docs/Web/Events-->
+                            <button class='btn btn-primary'
+                                (click)='toggleImage()'>
                                 Show Image
                             </button>
                         </th>
@@ -37,7 +41,14 @@
                         <!--place holder for images-->
                         <td>
                             <!-- using property binding to bind image source property , we enclose the src in square brackets-->
-                            <img [src]='product.imageUrl' [title]='product.productName' [style.width.px]='imageWidth' [style.margin.px]='imageMargin'>
+                            <!-- element will be added to the DOM only when show image is true-->
+                            <!-- this is to either show or hide the image-->
+                            <!-- we want this image element if the showImage flag is true-->
+                            <img *ngIf='showImage'
+                                [src]='product.imageUrl' 
+                                [title]='product.productName'
+                                [style.width.px]='imageWidth'
+                                [style.margin.px]='imageMargin'>
                         </td>
                         <!--using interpolation to get values of propert-->
                         <td>{{product.productName}}</td>
