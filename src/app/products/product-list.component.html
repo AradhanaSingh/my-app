@@ -65,6 +65,7 @@
                         <!-- 1.2-2, at least one number to the left of the decimal place and only two numbers to the right of the decimal place-->
                         <td>{{product.price | currency:'USD':true:'1.2-2' }}</td>
                         <!--using Star Component, replacing binding by directive-->
+                        <!-- using property binding, we enclose the binding target in squre brackets, set the binding source to the data that the continaer wants to pass to the nested component-->
                         <td><pm-star></pm-star></td>
                     </tr>
                 </tbody>
