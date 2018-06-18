@@ -58,7 +58,7 @@
                         </td>
                         <!--using interpolation to get values of propert-->
                         <td>{{product.productName}}</td>
-                        <td>{{product.productCode | lowercase}}</td>
+                        <td>{{product.productCode | lowercase | convertToSpaces: '-'}}</td>
                         <td>{{product.releaseDate}}</td>
                         <!-- adding pipe to tranfor data-->
                         <!-- 1.2-2, at least one number to the left of the decimal place and only two numbers to the right of the decimal place-->
