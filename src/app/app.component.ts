@@ -9,8 +9,8 @@ import { ProductService } from '/Users/aru/code/my-app/src/app/products/product.
   <div><h1> {{title}}</h1>
        <pm-products></pm-products>
   </div>
-  `
-  //providers: [ProductService]
+  `,
+  providers: [ ProductService ]
 
 })
 export class AppComponent {

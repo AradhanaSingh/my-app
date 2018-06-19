@@ -1,6 +1,6 @@
-import { Component } from "@angular/core";
-import {Iproduct} from './product'
-import {Component, OnInit} from "@angular/core"
+import { Component, OnInit } from "@angular/core";
+import { IProduct } from './product';
+import { ProductService } from './product.service';
 
 @Component({
     selector: 'pm-products',
@@ -27,8 +27,8 @@ export class ProductListComponent implements OnInit {
     }
 
     filteredProducts: Iproduct[];
-    products: IProduct[] = [
-        {
+    products: IProduct[] = [];
+      /*  {
             "productId": 1,
             "productName": "Leaf Rake",
             "productCode": "GDN-0011",
@@ -78,11 +78,10 @@ export class ProductListComponent implements OnInit {
             "starRating": 4.6,
             "imageUrl": "http://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png"
         }
-    ];
+    ];*/
 
-    constructor() {
-        this.filteredProducts = this.products;
-        this.listFilter = 'cart';
+    constructor(private _productService: ProductService) {
+         this.listFilter = 'cart';
     }
     onRatingClicked(message: string): void {
         // displays rating in page Title
@@ -101,6 +100,9 @@ export class ProductListComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        // now the data is coming from productService
         console.log('In OnInit');
+        this.products = this._productService.getProducts();
+        this.filteredProducts = this.products;
     }
 }
