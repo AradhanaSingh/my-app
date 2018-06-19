@@ -1,4 +1,4 @@
-import { Component, Input, ngOnChanges, Output } from '@angular/core';
+import { Component, Input, ngOnChanges, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'pm-star',
@@ -12,11 +12,13 @@ export class StarComponent implements ngOnChanges {
     // container component then passes data to the nested component by setting this property with property binding
     @Input() rating: number;
     startWidth: number;
+    @Output() ratingClicked: EventEmitter<string> = new EventEmitter<string>();
     //Type Script support generics
     //@Output() notify: EventEmitter<string> = new EventEmitter<string>();
 
+    // raising rating clicked event
     onClick() {
-        console.log(`The rating ${this.rating} was clicked`);
+        this.ratingClicked.emit(`The rating ${this.rating} was clicked`);
     }
     ngOnChanges(): void {
         this.startWidth = this.rating;
