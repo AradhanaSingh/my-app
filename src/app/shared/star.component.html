@@ -1,7 +1,9 @@
 <!-- displays five stars and then crops the stars based on a defined width-->
 <div class="crop"
     [style.width.px]="starWidth"
-    [title]="rating">
+    [title]="rating"
+    (click)="onClick()">
+    <!-- respond to use clicks event, binding div elements click event to an onClick method in the star component class-->
     <div style="width: 86px">
             <span class="glyphicon glyphicon-star"></span>
             <span class="glyphicon glyphicon-star"></span>
