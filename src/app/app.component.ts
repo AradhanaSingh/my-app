@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProductService } from '/Users/aru/code/my-app/src/app/products/product.service.ts'
+import { ProductService } from '/Users/aru/code/my-app/src/app/products/product.service'
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,7 @@ import { ProductService } from '/Users/aru/code/my-app/src/app/products/product.
         <div class='container-fluid'>
           <a class='navbar-brand'>{{pageTitle}}</a>
           <ul class='nav navbar-nav'>
-            <li> <a [routerLink]="['/welcome']"> Home </a></li>
+            <li> <a [routerLink]="['/products']"> Home </a></li>
             <li> <a [routerLink]="['/products']"> Product List </a></li>
           </ul>
         </div>
