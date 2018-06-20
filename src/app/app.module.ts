@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { ProductListComponent } from './products/product-list.component';
 import { ConvertToSpacesPipe } from './shared/convert-to-spaces.pipe';
 import { StarComponent } from './shared/star.component';
+import { ProductDetailComponent } from './products/product-detail.component.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { StarComponent } from './shared/star.component';
     // Our Product list component wants to use the ConvertToSpaces pipe. So we open the ANgular module that declares the product-list component
     // which on our example is AppModule
     ConvertToSpacesPipe,
-    StarComponent
+    StarComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
