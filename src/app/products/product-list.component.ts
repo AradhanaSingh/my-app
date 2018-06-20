@@ -3,7 +3,8 @@ import { IProduct } from './product';
 import { ProductService } from './product.service';
 
 @Component({
-    selector: 'pm-products',
+    // selector is no more needed since we will be routing to product list component
+    //selector: 'pm-products',
     templateUrl: './product-list.component.html',
     // any defined selectors or style classes are only applicable to the component's template and won't leak out into any other part of application
     styleUrls: ['./product-list.component.css']
@@ -26,7 +27,7 @@ export class ProductListComponent implements OnInit {
         this.filteredProducts = this.listFilter ? this.performFilter(this.listFilter) : this.products;
     }
 
-    filteredProducts: Iproduct[];
+    filteredProducts: IProduct[];
     products: IProduct[] = [];
       /*  {
             "productId": 1,

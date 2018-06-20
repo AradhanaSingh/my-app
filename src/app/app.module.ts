@@ -6,6 +6,7 @@ import { ProductListComponent } from './products/product-list.component';
 import { ConvertToSpacesPipe } from './shared/convert-to-spaces.pipe';
 import { StarComponent } from './shared/star.component';
 import { ProductDetailComponent } from './products/product-detail.component.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,12 @@ import { ProductDetailComponent } from './products/product-detail.component.comp
   imports: [
     BrowserModule,
     // ngModel is found in FormsModule
-    FormsModule
+    FormsModule,
+    //  establishes route for our applications
+    RouterModule.forRoot([
+      { path: 'products', component: ProductListComponent},
+      { path: 'products/:id', component: ProductDetailComponent}
+    ], { useHash: true })
   ],
   providers: [],
   bootstrap: [AppComponent]
