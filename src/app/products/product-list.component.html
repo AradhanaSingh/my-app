@@ -58,7 +58,7 @@
                                 [style.margin.px]='imageMargin'>
                         </td>
                         <!--using interpolation to get values of propert-->
-                        <td>{{product.productName}}</td>
+                        <td><a [routerLink]="['/products', product.productId]">{{product.productName}}</a></td>
                         <td>{{product.productCode | lowercase | convertToSpaces: '-'}}</td>
                         <td>{{product.releaseDate}}</td>
                         <!-- adding pipe to tranfor data-->
